@@ -51,7 +51,7 @@ public class DroneServiceImpl implements DroneService {
 
 		if (totalWeight > drone.getWeightLimit()) {
 			drone.setState(DroneState.IDLE);
-			throw new IllegalArgumentException("Total weight exceeds drone weight limit");
+			throw new IllegalStateException("Total weight exceeds drone weight limit");
 		}
 
 		if (drone.getBatteryCapacity() < 25) {
