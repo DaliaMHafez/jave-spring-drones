@@ -1,13 +1,16 @@
 package com.drones.springbootdrones.model;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 
 public class Medication {
+	@NotBlank
 	@Pattern(regexp = "^[\\w-]+$", message = "Name can only contain letters, numbers, '-' and '_'")
 	private String name;
 
 	private int weight;
 
+	@NotBlank
 	@Pattern(regexp = "^[A-Z_\\d]+$", message = "Code can only contain upper case letters, underscore and numbers")
 	private String code;
 

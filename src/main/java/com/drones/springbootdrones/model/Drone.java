@@ -7,21 +7,27 @@ import com.drones.springbootdrones.enums.DroneState;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 public class Drone {
+	@NotBlank
 	@Size(max = 6, message = "Serial number must be at most 100 characters")
 	private String serialNumber;
-
+	
+	@NotNull
 	private DroneModel model;
 
 	@Min(value = 0, message = "Weight limit must be at least 0")
 	@Max(value = 500, message = "Weight limit cannot exceed 500")
 	private int weightLimit;
 
+
 	@Max(value = 100, message = "Battery Capacity cannot exceed 100")
 	private int batteryCapacity;
 
+	@NotNull
 	private DroneState state;
 
 	private List<Medication> medications;
