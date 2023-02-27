@@ -1,0 +1,5 @@
+package com.drones.springbootdrones.enums;
+
+public enum DroneModel {
+	LIGHTWEIGHT, MIDDLEWEIGHT, CRUISERWEIGHT, HEAVYWEIGHT
+}
