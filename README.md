@@ -10,8 +10,7 @@ Build and Run
 Clone this repository
 Open a terminal and navigate to the project root directory
 Run mvn clean install to build the project and generate the executable JAR file
-Run java -jar target/spring-boot-drones 0.0.1-SNAPSHOT.jar to start the application
-By default, the application will start on port 8080.
+Run mvn build to start the application
 
 Test
 The project includes unit tests for the API endpoints. To run the tests, navigate to the project root directory and run mvn test.
